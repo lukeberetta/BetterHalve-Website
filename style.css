@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'PolySans';
-  src: url('fonts/PolySans-Neutral.ttf') format('truetype');
+  src: url('/fonts/PolySans-Neutral.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'PolySans';
-  src: url('fonts/PolySans-Median.ttf') format('truetype');
+  src: url('/fonts/PolySans-Median.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
