@@ -26,11 +26,9 @@ Landing page for the BetterHalve iOS app, deployed via Cloudflare Pages (synced 
 ### Images (`/img/`)
 | File | Description | Used in |
 |---|---|---|
-| `couple.png` | Lifestyle hero photo | Hero background |
-| `01.png` | iPhone mockup — Home screen | Hero floating phone |
-| `02.png` | iPhone mockup — Insights | Feature section 1 |
-| `03.png` | iPhone mockup — Activity | Feature section 2 |
-| `04.png` | iPhone mockup — Add Expense | Feature section 3 |
+| `couple.jpg` | Lifestyle photo | Unused |
+| `01.png` | iPhone mockup — Home screen | Hero phone |
+| `02.png`–`04.png` | iPhone mockups — Insights, Activity, Add Expense | Unused |
 | `logo.svg` | Horizontal wordmark | Nav, footer |
 | `logo stacked.svg` | Stacked wordmark | Available if needed |
 | `app icon.svg` | App icon | Available if needed |
@@ -56,26 +54,17 @@ Font stack: `'PolySans', -apple-system, BlinkMacSystemFont, sans-serif`
 
 ## Design Direction
 
-- Bold, editorial, dynamic — not a typical AI-template site
-- Dieter Rams principles: minimal, purposeful, nothing decorative
-- Rainbow.me inspired: dark bg, bright accent, large type, floating mockups
-- Web3 aesthetic: glassmorphism nav, radial glows, scroll-driven animations
-- PolySans Median for all headlines — tight tracking, large scale
-- Phone mockups tilted and floating with CSS animations
-- Scroll-triggered reveal animations via IntersectionObserver
-- Hero parallax on `couple.png`
-- Marquee strip between hero and features
+- Minimal, single-screen landing page — nothing decorative
+- Dark bg, one accent colour, large PolySans Median headline with tight tracking
+- One static phone mockup, no tilts, glows, parallax or scroll animations
 
 ---
 
 ## Page Structure (index.html)
 
-1. **Nav** — fixed, transparent → frosted glass on scroll. Logo left, "Coming to App Store" pill right
-2. **Hero** — full-viewport. `couple.png` parallax bg + gradient overlay. Headline left, `01.png` floating phone right
-3. **Marquee** — scrolling feature strip (15+ currencies, AI insights, real-time sync, etc.)
-4. **Features** — 3 alternating sections (phone + copy), each with a radial accent glow
-5. **CTA card** — centered, dark raised card with bottom accent glow
-6. **Footer** — logo + nav links + "Built in South Africa by Luke Beretta" credit
+1. **Nav** — logo left, "Download" link right
+2. **Hero** — headline, one-line subtitle, App Store badge; `01.png` phone on the right (stacked below on mobile)
+3. **Footer** — single line: credit left, Support / Privacy / Terms right
 
 ---
 
