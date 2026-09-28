@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <title>Join me on BetterHalve</title>
+  <meta name="description" content="Your partner invited you to share expenses on BetterHalve." />
+  <meta name="robots" content="noindex" />
+  <meta name="apple-itunes-app" content="app-id=6760578425" />
+  <meta property="og:title" content="Join me on BetterHalve" />
+  <meta property="og:description" content="Your partner invited you to share expenses on BetterHalve." />
+  <meta property="og:image" content="https://betterhalve.com/img/Website.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="676" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="home">
+
+    <header class="nav">
+      <a href="/" aria-label="BetterHalve home">
+        <div class="nav-logo"><img src="/img/logo.svg" alt="BetterHalve" /></div>
+      </a>
+    </header>
+
+    <main class="hero join">
+      <div>
+        <h1>You're invited.<br><span>Join your partner.</span></h1>
+        <p class="hero-sub" id="join-sub">Get BetterHalve, then open this invite link again. You can also enter this code in the app.</p>
+        <div class="join-code" id="join-code" hidden></div>
+        <div class="join-actions">
+          <a class="join-open" id="join-open" href="/" hidden>Open in BetterHalve</a>
+          <a class="app-store-badge" href="https://apps.apple.com/app/betterhalve/id6760578425" aria-label="Download on the App Store">
+            <img src="/img/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" />
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="home-foot">
+      <span>© 2026 BetterHalve</span>
+      <nav aria-label="Footer">
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <script>
+    // Same alphabet and length the app uses for invite codes.
+    const code = (location.pathname.split('/')[2] || '').toUpperCase();
+    if (/^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}$/.test(code)) {
+      document.getElementById('join-code').textContent = code;
+      document.getElementById('join-code').hidden = false;
+      const open = document.getElementById('join-open');
+      open.href = 'betterhalfapp://join/' + code;
+      open.hidden = false;
+    } else {
+      document.getElementById('join-sub').textContent = "This invite link isn't valid. Ask your partner to send a new one.";
+    }
+  </script>
+
+</body>
+</html>

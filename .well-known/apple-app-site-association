@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["W4UGWY339G.com.lukeberetta.BetterHalf"],
+        "components": [
+          { "/": "/join/*", "comment": "Partner invite links" }
+        ]
+      }
+    ]
+  }
+}
