@@ -1,2 +1,6 @@
 # Invite links: betterhalve.com/join/CODE opens the app when installed, otherwise this page.
 /join/*  /join  200
+
+# Cloudflare Pages doesn't publish dot-folders, so serve Apple's association file from a plain path.
+/.well-known/apple-app-site-association  /apple-app-site-association.json  200
+/apple-app-site-association  /apple-app-site-association.json  200
